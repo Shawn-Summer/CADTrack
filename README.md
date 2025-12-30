@@ -118,7 +118,7 @@ Dowmload the pretrained [foundation model](https://pan.baidu.com/s/15GjTLQboXcfJ
 ```
 bash train.sh
 ```
-You can train models with various modalities and variants by modifying ```train.sh```.
+You can train models with various variants by modifying ```train.sh```.
 
 ## 📊 Testing
 ### Testing on Benchmark Datasets
