@@ -1,14 +1,45 @@
 # [AAAI2026]CADTrack: Learning Contextual Aggregation with Deformable Alignment for Robust RGBT Tracking
 
-![pipline](assets/pipline.png)
+![pipline](assets/motivation.png)
 
 > [CADTrack: Learning Contextual Aggregation with Deformable Alignment for Robust RGBT Tracking](https://arxiv.org/abs/2511.17967)  
-> Hao Li, Yuhao Wang, Xiantao Hu, Wenning Hao, Pingping Zhang, Dong Wang, Huchuan Lu
+> [Hao Li](https://orcid.org/0009-0009-2668-7908), [Yuhao Wang](https://924973292.github.io/), [Xiantao Hu](https://xiantaohu.github.io/index.html), [Wenning Hao*](https://orcid.org/0000-0002-1526-7889), [Pingping Zhang*](https://scholar.google.com/citations?user=MfbIbuEAAAAJ&hl=zh-CN), [Dong Wang](https://scholar.google.com/citations?user=nVgPQpoAAAAJ&hl=zh-CN), [Huchuan Lu](https://scholar.google.com/citations?user=D3nE0agAAAAJ&hl=zh-CN)
 > AAAI 2026
 
 Official implementation of [**CADTrack**](https://arxiv.org/pdf/2511.17967), including [Models & Raw Results](https://pan.baidu.com/s/1TR4qnWtXS140pddngcn_-w 
 )(Baidu Driver:9527) and training&testing codes.
- 
+
+## News
+- We released the **CADtrack** codebase!
+- Great news! Our paper has been accepted to **AAAI 2026**! 
+- 
+## Contributions
+<p align="center">
+  <p align="center">
+    <img src="assets/pipline.png" alt="Description of the image" style="width:100%;">
+  <p align="center">
+<p align="center" style="font-size: 18px; color: gray;">
+    Figure 1: Overall framework of CADTrack.
+</p>
+<p align="center">
+    <img src="assets/mambabridge.png" alt="RGBNT201 assets" style="width:100%;">
+</p>
+<p align="center" style="font-size: 18px; color: gray;">
+    Figure 2: Details of MFI.
+</p>
+<p align="center">
+    <img src="assets/moe.png" alt="RGBNT201 assets" style="width:100%;">
+</p>
+<p align="center" style="font-size: 18px; color: gray;">
+    Figure 3: The structure of CAM.
+</p>
+<p align="center">
+    <img src="assets/offset.png" alt="RGBNT201 assets" style="width:100%;">
+</p>
+<p align="center" style="font-size: 18px; color: gray;">
+    Figure 4: Deformable alignment of DAM.
+</p>
+
 ## Installation
 Create and activate a conda environment:
 ```
