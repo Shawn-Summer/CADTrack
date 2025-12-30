@@ -57,7 +57,7 @@ conda activate CADTrack
 ```
 Install the required packages:
 ```
-pip install -r requirements.txt
+bash install_cadtrack.sh
 ```
 
 ## 📂 Data Preparation
