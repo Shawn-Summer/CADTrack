@@ -1,6 +1,6 @@
 <h1 align="center">🎯 CADTrack: Contextual Aggregation with Deformable Alignment for Robust RGBT Tracking</h1>
 
-![pipline](assets/motivation.png)
+![pipline](assets/motivation.jpg)
 
 <div align="center">
   <a href="https://arxiv.org/abs/2511.17967">CADTrack: Learning Contextual Aggregation with Deformable Alignment for Robust RGBT Tracking</a><br>
