@@ -54,8 +54,9 @@ Create and activate a conda environment:
 ```
 conda create -n CADTrack python=3.10
 conda activate CADTrack
+cd path/to/CADTrack
 ```
-Install the required packages:
+Download [mamba_install](https://pan.baidu.com/s/1Uy1cICsuEKUgv5eMODn5Aw?pwd=a4ja) and install the required packages:
 ```
 bash install_cadtrack.sh
 ```
