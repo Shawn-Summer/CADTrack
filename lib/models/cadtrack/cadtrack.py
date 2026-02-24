@@ -64,16 +64,17 @@ class CADTrack(nn.Module):
             temp_r = x[:, :N // 2, :]
             temp_x = x[:, N // 2:, :]
 
-            boss_fea = torch.cat([temp_r[:, :1, :], temp_x[:, :1, :]], dim=1)
+            boss_fea = torch.cat([temp_r[:, :1, :], temp_x[:, :1, :]], dim=1) # cues [B,2,C]
             temp_r_str, temp_x_str = self.CDA(temp_r[:, 1:num_template_token // 2 + 1, :],
                                               temp_r[:, num_template_token // 2 + 1:num_template_token + 1, :],
                                               temp_x[:, 1:num_template_token // 2 + 1, :],
                                               temp_x[:, num_template_token // 2 + 1:num_template_token + 1, :],
-                                              boss_fea)
+                                              boss_fea) # temp_r_str : cues of r [B,1,C]
             temp_r_query = temp_r_str.clone().detach()
             temp_x_query = temp_x_str.clone().detach()
             track_query_before = [temp_r_query, temp_x_query]
-
+            
+            # use cues strengthen the output feature 
             feat_last_r = temp_r[:, -num_search_token:, :]
             temp_attn_r = temp_r_str + self.CSS_strengthen_r(temp_r_str, feat_last_r, feat_last_r)
             temp_attn_r = temp_attn_r + self.CSS_process_r(temp_attn_r)
@@ -86,7 +87,7 @@ class CADTrack(nn.Module):
             att_x = torch.matmul(feat_last_x, temp_attn_x.transpose(1, 2))
             feat_last_x = att_x * feat_last_x
 
-            feat_last = torch.cat([feat_last_r, feat_last_x], dim=-1)
+            feat_last = torch.cat([feat_last_r, feat_last_x], dim=-1) # [B,256,768*2]
 
             out = self.forward_head(feat_last, None)
 
